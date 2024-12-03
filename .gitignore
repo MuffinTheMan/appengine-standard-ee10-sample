@@ -1,0 +1,64 @@
+.DS_Store
+
+#From https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
+# User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/shelf/
+
+# Sensitive or high-churn files:
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/misc.xml
+.idea/jsLibraryMappings.xml
+.idea/encodings.xml
+.idea/markdown-exported-files.xml
+.idea/markdown-navigator
+.idea/markdown-navigator.xml
+.idea/codeStyles
+.idea/codestream.xml
+.idea/compiler.xml
+.idea/csv-plugin.xml
+.idea/dictionaries
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/jarRepositories.xml
+.idea/markdown-navigator-enh.xml
+
+# Gradle:
+.idea/libraries
+.idea/artifacts
+.gradle
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+.idea/modules.xml
+.idea/*.iml
+.idea/modules
+*.iml
+*.ipr
+
+classes/
+out/
+node_modules
+build/
+local-datastore
+dist
+
+#ignore the default assets css
+default/src/main/webapp/assets/css
+default/node_modules
+
+# Ignoring other local config files
+.classpath
+.project
+.settings
+
+# Any files in binary directories
+bin/
