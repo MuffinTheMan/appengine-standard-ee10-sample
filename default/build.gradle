@@ -1,5 +1,6 @@
 String projectIdProperty = rootProject.getProperty('projectId')
 String versionNum = rootProject.getProperty('versionNum')
+String appengineRuntimeLocation = "target/test-${versionNum}"
 
 buildscript { // Configuration for building
     repositories {
@@ -17,8 +18,10 @@ buildscript { // Configuration for building
 
 war {
     webAppDirName = 'src/main/webapp'
+    dependsOn 'copyLibs'
+    dependsOn 'copyLibs2'
+//    dependsOn 'copyJars'
 }
-
 
 sourceSets {
     main {
@@ -44,6 +47,22 @@ appengine {  // App Engine tasks configuration
         promote = false
         version = versionNum
     }
+}
+
+task copyLibs(type: Copy) {
+    from '../libs/'
+    into layout.buildDirectory.dir('exploded-default/WEB-INF')
+}
+
+task copyLibs2(type: Copy) {
+    from '../libs/'
+    into layout.buildDirectory.dir('exploded-default/java_runtime')
+}
+
+task copyJars(type: Copy) {
+    from '../libs'
+    include '**/*.jar'
+    into layout.buildDirectory.dir(appengineRuntimeLocation)
 }
 
 task ciDeployModule {

@@ -62,3 +62,4 @@ default/node_modules
 
 # Any files in binary directories
 bin/
+libs/
