@@ -16,34 +16,6 @@
     <system-properties>
         <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
     </system-properties>
-    <!--    <entrypoint>-->
-    <!--        java-->
-    <!--        -showversion -Xms32M -Xmx819M -XX:+UseG1GC -XX:+ParallelRefProcEnabled-->
-    <!--        -XX:+PrintCommandLineFlags-->
-    <!--        &#45;&#45;add-opens java.base/java.lang=ALL-UNNAMED-->
-    <!--        &#45;&#45;add-opens java.base/java.nio.charset=ALL-UNNAMED-->
-    <!--        &#45;&#45;add-opens java.logging/java.util.logging=ALL-UNNAMED-->
-    <!--        &#45;&#45;add-opens java.base/java.util.concurrent=ALL-UNNAMED-->
-    <!--        -Dclasspath.runtimebase=/base/java_runtime-->
-    <!--        -Djava.class.path=/base/java_runtime/runtime-main.jar-->
-    <!--        -Djava.library.path=/base/java_runtime:-->
-    <!--        com/google/apphosting/runtime/JavaRuntimeMainWithDefaults-->
-    <!--        &#45;&#45;fixed_application_path=/workspace-->
-    <!--        /base/java_runtime-->
-    <!--    </entrypoint>-->
-    <!--    <entrypoint>-->
-    <!--        java-->
-    <!--        &#45;&#45;add-opens java.base/java.lang=ALL-UNNAMED-->
-    <!--        &#45;&#45;add-opens java.base/java.nio.charset=ALL-UNNAMED-->
-    <!--        &#45;&#45;add-opens java.base/java.util.concurrent=ALL-UNNAMED-->
-    <!--        &#45;&#45;add-opens java.logging/java.util.logging=ALL-UNNAMED-->
-    <!--        -showversion -XX:+PrintCommandLineFlags-->
-    <!--        -Djava.class.path=runtime-main.jar-->
-    <!--        -Dclasspath.runtimebase=.:-->
-    <!--        com/google/apphosting/runtime/JavaRuntimeMainWithDefaults-->
-    <!--        &#45;&#45;fixed_application_path=.-->
-    <!--        .-->
-    <!--    </entrypoint>-->
     <entrypoint>
         java
         -showversion
@@ -52,11 +24,11 @@
         --add-opens java.base/java.nio.charset=ALL-UNNAMED
         --add-opens java.base/java.util.concurrent=ALL-UNNAMED
         --add-opens java.logging/java.util.logging=ALL-UNNAMED
-        -Dclasspath.runtimebase=/workspace/java_runtime:
-        -Djava.class.path=/workspace/java_runtime/runtime-main.jar
-        -Djava.library.path=/workspace/java_runtime:
+        -Dclasspath.runtimebase=.:
+        -Djava.class.path=./runtime-main.jar
+        -Djava.library.path=.:
         com/google/apphosting/runtime/JavaRuntimeMainWithDefaults
         --fixed_application_path=/workspace
-        /workspace/java_runtime
+        .
     </entrypoint>
 </appengine-web-app>

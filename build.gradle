@@ -41,18 +41,6 @@ allprojects {
         implementation 'jakarta.servlet:jakarta.servlet-api:6.1.0'
         // https://mvnrepository.com/artifact/com.google.appengine/appengine-api-1.0-sdk
         implementation group: 'com.google.appengine', name: 'appengine-api-1.0-sdk', version: '2.0.31'
-
-        // https://mvnrepository.com/artifact/com.google.appengine/runtime-deployment
-        //        implementation 'com.google.appengine:runtime-deployment:2.0.31'
-        implementation files(
-                "libs/runtime-impl-jetty9.jar",
-                "libs/runtime-impl-jetty12.jar",
-                "libs/runtime-impl-jetty9.jar",
-                "libs/runtime-main.jar",
-                "libs/runtime-shared-jetty12-ee10.jar",
-                "libs/runtime-shared-jetty12.jar",
-                "libs/runtime-shared-jetty9.jar"
-        )
     }
 }
 
