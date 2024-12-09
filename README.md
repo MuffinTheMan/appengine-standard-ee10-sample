@@ -1,3 +1,7 @@
+## App Engine Runtime
+
+Replace `runtime-*.jar` files in `default/src/main/webapp` with actual jars (these are currently empty placeholder files, since the actual files are large and impractical to include in the project). If you want to use Google's runtime, there's no need to replace these jars; instead, remove the `<endpoint>` block from `default/src/main/webapp/WEB-INF/appengine-web.xml`.
+
 ## Deploying
 
 Via commandline, deploy to an existing Appengine Standard project like so (replace `APPENGINE_PROJECT_ID_HERE` and `VERSION_NUM_HERE` with the ProjectID for the Appengine project and whatever Version you want):
