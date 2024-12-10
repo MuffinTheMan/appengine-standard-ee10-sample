@@ -21,3 +21,9 @@ In addition to the cloud Appengine runtime being apparently broken, the most agg
 * Navigate to `/redirect-test`
     * Local App: redirected to `/jsp`
     * Deployed App: the browser displays an error like `Request failed: Unexpected Error: java.io.IOException: written 2 > 0 content-length`
+
+### Working
+
+* Navigate to `/redirect`
+    * Local App: redirected to `/jsp`
+    * Deployed App: redirected to `/jsp`
